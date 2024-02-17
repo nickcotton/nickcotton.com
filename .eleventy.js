@@ -1,11 +1,8 @@
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
-const EleventyWebcPlugin = require('@11ty/eleventy-plugin-webc');
+const { DateTime } = require('luxon');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
-  eleventyConfig.addPlugin(EleventyWebcPlugin, {
-    components: 'src/_includes/components/**/*.webc',
-  });
 
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('./src/images');
@@ -45,15 +42,17 @@ module.exports = function (eleventyConfig) {
     encoding: 'utf-8',
   });
 
+  eleventyConfig.addFilter("postDate", (dateObj) => DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED))
+
   return {
     dir: {
       input: 'src',
       output: '_site',
     },
     passthroughFileCopy: true,
-    templateFormats: ['html', 'md', 'webc'],
-    htmlTemplateEngine: 'webc',
-    dataTemplateEngine: 'webc',
-    markdownTemplateEngine: 'webc',
+    templateFormats: ['liquid', 'html', 'md'],
+    htmlTemplateEngine: 'liquid',
+    dataTemplateEngine: 'liquid',
+    markdownTemplateEngine: 'liquid',
   };
 };

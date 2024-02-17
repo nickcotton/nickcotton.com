@@ -1,0 +1,9 @@
+{% assign metaTitle = site.data.meta.title | default: '' %}
+{% if metaTitle == '' %}
+  {% if site.data.name == page.title %}
+    {% assign metaTitle = page.title %}
+  {% else %}
+    {% assign metaTitle = page.title | append: ' :: ' | append: site.data.name %}
+  {% endif %}
+{% endif %}
+<title>{{ metaTitle }}</title>

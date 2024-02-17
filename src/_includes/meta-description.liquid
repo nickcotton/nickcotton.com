@@ -1,0 +1,8 @@
+{% assign metaDesc = site.data.meta.desc | default: '' %}
+{% if metaDesc == '' %}
+  {% assign socialImage = site.data.url | append: '/images/social-share.png' %}
+{% endif %}
+
+<meta name="description" content="{{ metaDesc }}" />
+<meta name="twitter:description" content="{{ metaDesc }}" />
+<meta property="og:description" content="{{ metaDesc }}" />

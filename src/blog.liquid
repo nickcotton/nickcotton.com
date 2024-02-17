@@ -1,0 +1,14 @@
+---
+layout: 'layouts/page.liquid'
+title: 'blog'
+meta:
+  desc:
+    'The blog part.'
+---
+
+{% for post in collections.post %}
+  <div class="flex items-baseline justify-between border-b border-slate-400 py-4">
+    <h2 class="text-white text-2xl leading-none"><a href="{{ post.url }}" class="block">{{ post.data.title }}</a></h2>
+    <p class="text-slate-300 leading-none">{{ post.date | postDate }}</p>
+  </div>
+{% endfor %}

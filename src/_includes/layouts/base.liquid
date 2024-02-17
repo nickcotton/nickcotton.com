@@ -1,3 +1,4 @@
+{%- capture fullUrl %}https://nickcotton.com{{ page.url }}{% endcapture -%}
 <!DOCTYPE html>
 <html class="leading-tight text-gray-900 antialiased" lang="en">
   <head>
@@ -5,15 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title webc:is="meta-title"></title>
-
-    <link webc:is="meta-canonical"></link>
-
-    <meta webc:is="meta-property"></meta>
-
-    <meta webc:is="meta-social"></meta>
-
-    <meta webc:is="meta-description"></meta>
+    {% include 'meta-title' %}
+    {% include 'meta-canonical' %}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="48x48" />
@@ -30,7 +24,6 @@
 
     <!-- https://www.filamentgroup.com/lab/load-css-simpler/ -->
     <link
-      webc:keep
       crossorigin="anonymous"
       rel="stylesheet"
       href="https://rsms.me/inter/inter.css"
@@ -38,13 +31,13 @@
       onload="this.media='all'; this.onload=null;"
     />
   </head>
-  <body class="min-h-screen bg-white" data-env="{{ node.env }}">
-    <site-header></site-header>
+  <body class="min-h-screen bg-slate-800 grid grid-rows-[min-content_1fr_16px]" data-env="{{ node.env }}">
+    {% include 'site-header' %}
 
-    <div class="py-10" @html="content"></div>
+    <main class="mx-4 py-8 rounded-md bg-slate-900">
+      {{ content }}
+    </main>
 
-    <site-banner></site-banner>
-
-    <script type="module" src="/main.js" webc:keep></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

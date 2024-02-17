@@ -9,7 +9,6 @@
     "plugin:promise/recommended",
     "plugin:prettier/recommended"
   ],
-  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
