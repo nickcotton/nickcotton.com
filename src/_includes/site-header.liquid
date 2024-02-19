@@ -1,7 +1,7 @@
 <header>
   <nav class="bg-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 sm:flex h-16 items-center justify-between">
-      <a href="/" class="font-serif font-bold text-stone-100 flex items-end gap-1 group home">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between" x-data="{open: false, toggle(){this.open = !this.open;}}">
+      <a href="/" class="font-serif font-bold flex items-end gap-1 group home relative z-20" :class="open ? 'text-gray-900' : 'text-stone-100'">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smart-home flip" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105"></path>
@@ -11,28 +11,41 @@
           N<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[25px]">ick </span>
           C<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[45px]">otton</span></span>
       </a>
-      <ul class="flex space-x-4 text-stone-100">
-        {% for item in navigation.items %}
-          {% assign current = '' %}
-          {% assign letters = item.text | split: '' %}
-          {% if item.url == page.url %}
-            {% assign current = 'aria-current="page"' %}
-            {% assign highlight = 'cursor-default' %}
-          {% endif %}
-          <li>
-            <a
-              href="{{ item.url }}"
-              class="text-base font-bold flex {{ highlight }}"
-              {{ current }}
-            >
-              {% for letter in letters %}
-                <span class="nav-letter">{{ letter }}</span>
-              {% endfor %}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+      <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md pt-20 z-10" :class="open || 'hidden'">
+        <ul class="flex flex-col md:flex-row gap-y-8 gap-x-4 text-gray-900 md:text-stone-100">
+          {% for item in navigation.items %}
+            {% assign current = '' %}
+            {% assign letters = item.text | split: '' %}
+            {% if item.url == page.url %}
+              {% assign current = 'aria-current="page"' %}
+              {% assign highlight = 'cursor-default' %}
+            {% endif %}
+            <li>
+              <a
+                href="{{ item.url }}"
+                class="text-7xl md:text-base flex justify-center {{ highlight }}"
+                {{ current }}
+              >
+                {% for letter in letters %}
+                  <span class="nav-letter">{{ letter }}</span>
+                {% endfor %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <button class="text-gray-900 absolute top-4 right-3" :class="open || 'hidden'" @click="toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
 
+
+        </button>
+      </nav>
+      <button class="md:hidden text-white" @click="toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm8.25 5.25a.75.75 0 0 1 .75-.75h8.25a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+        </svg>
+      </button>
     </div>
   </nav>
 </header>
