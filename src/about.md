@@ -7,4 +7,4 @@ intro:
 
 Lead Front end developer at [Papier](https://papier.com).
 
-Find me on Mastodon, Threads, X, LinkedIn, Insta.
+Find me on Mastodon, Threads, X, Letterboxd, LinkedIn, Insta.
