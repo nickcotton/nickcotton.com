@@ -42,27 +42,32 @@
 .nav-letter {
   font-weight: 200;
   transition: font-weight 0.2s ease-in-out;
-
 }
 
-.nav-letter:hover {
-  font-weight: 800;
-}
+@media (width >= 768px) {
+  .nav-letter {
+    font-weight: 400;
+  }
 
-.nav-letter:hover ~ .nav-letter {
+  .nav-letter:hover {
+    font-weight: 1000;
+  }
+
+  .nav-letter:hover ~ .nav-letter {
+    font-weight: 800;
+  }
+
+  .nav-letter:hover ~ .nav-letter ~ .nav-letter {
+    font-weight: 600;
+  }
+
+  .nav-letter:has(+ .nav-letter:hover) {
+    font-weight: 800;
+  }
+
+  .nav-letter:has(+ .nav-letter + .nav-letter:hover) {
   font-weight: 600;
-}
-
-.nav-letter:hover ~ .nav-letter ~ .nav-letter {
-  font-weight: 400;
-}
-
-.nav-letter:has(+ .nav-letter:hover) {
-  font-weight: 600;
-}
-
-.nav-letter:has(+ .nav-letter + .nav-letter:hover) {
-font-weight: 400;
+  }
 }
 
 .prose {
