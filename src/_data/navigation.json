@@ -1,20 +1,24 @@
 {
   "items": [
     {
-      "text": "blog",
-      "url": "/blog/"
+      "text": "about",
+      "url": "/about/"
+    },
+    {
+      "text": "projects",
+      "url": "/projects/"
     },
     {
       "text": "/uses",
       "url": "/uses/"
     },
     {
-      "text": "about",
-      "url": "/about/"
+      "text": "/todo",
+      "url": "/todo/"
     },
     {
-      "text": "todo",
-      "url": "/todo/"
+      "text": "blog",
+      "url": "/blog/"
     }
   ]
 }
