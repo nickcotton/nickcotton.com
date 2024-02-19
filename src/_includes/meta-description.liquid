@@ -1,6 +1,6 @@
-{% assign metaDesc = site.data.meta.desc | default: '' %}
+{% assign metaDesc = site.meta.desc | default: '' %}
 {% if metaDesc == '' %}
-  {% assign socialImage = site.data.url | append: '/images/social-share.png' %}
+  {% assign socialImage = site.url | append: '/images/social-share.png' %}
 {% endif %}
 
 <meta name="description" content="{{ metaDesc }}" />
