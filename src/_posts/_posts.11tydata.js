@@ -4,5 +4,5 @@ module.exports = {
   permalink: function ({ page }) {
     return `/blog/${page.fileSlug}/`;
   },
-  tags: ["post"],
+  tags: ["posts"],
 };
