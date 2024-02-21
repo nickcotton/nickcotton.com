@@ -16,7 +16,7 @@
   },
   "scripts": {
     "clean": "rimraf _site",
-    "prepare": "npx husky install",
+    "prepare": "husky",
     "preview": "npx vite preview",
     "predev": "run-s clean",
     "dev": "cross-env NODE_ENV=development run-p dev:*",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@tailwindcss/typography": "^0.5.0",
@@ -50,8 +51,9 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "husky": "^8.0.1",
+    "husky": "^9.0.11",
     "lint-staged": "^13.0.3",
+    "markdown-it-task-lists": "^2.1.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.14",
     "postcss-cli": "^10.0.0",

@@ -1,8 +1,11 @@
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { DateTime } = require('luxon');
+const taskLists = require('markdown-it-task-lists');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
+  eleventyConfig.addPlugin(pluginRss);
 
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('./src/images');
@@ -44,13 +47,15 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("postDate", (dateObj) => DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED))
 
+  eleventyConfig.amendLibrary("md", mdLib => mdLib.use(taskLists));
+
   return {
     dir: {
       input: 'src',
       output: '_site',
     },
     passthroughFileCopy: true,
-    templateFormats: ['liquid', 'html', 'md'],
+    templateFormats: ['liquid', 'html', 'md', 'njk'],
     htmlTemplateEngine: 'liquid',
     dataTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
