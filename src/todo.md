@@ -14,17 +14,18 @@ Hoping this might become a bit of a community initiative (a bit like [/uses](/us
 
 Maybe (probably?) this has already been done before and I'm stealing someone's thing. Sorry! Someone please let me know.
 
-- [ ] Depoly the site!
-- [ ] Make this checkbox syntax work (think this is github flavoured markdown)
+- [x] Depoly the site!
+- [x] Make this checkbox syntax work (think this is github flavoured markdown)
 - [ ] favicon
 - [ ] robots.txt
 - [ ] sitemap.xml
 - [ ] 404 page
 - [ ] humans.txt
-- [ ] add an rss feed for posts
+- [x] add an rss feed for posts
 - [ ] Write some articles to put in said RSS feed
 - [ ] dark/light mode
 - [ ] dark/light mode toggle!
 - [ ] search
 - [ ] code highlighting
+- [x] some kind of analytics (not the bad one)
 
