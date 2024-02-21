@@ -14,6 +14,8 @@ Hoping this might become a bit of a community initiative (a bit like [/uses](/us
 
 Maybe (probably?) this has already been done before and I'm stealing someone's thing. Sorry! Someone please let me know.
 
+<div class="not-prose">
+
 - [x] Depoly the site!
 - [x] Make this checkbox syntax work (think this is github flavoured markdown)
 - [ ] favicon
@@ -29,3 +31,4 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [ ] code highlighting
 - [x] some kind of analytics (not the bad one)
 
+</div>
