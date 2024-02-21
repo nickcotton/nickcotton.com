@@ -6,7 +6,7 @@ meta:
     'The blog part.'
 ---
 
-{% for post in collections.post %}
+{% for post in collections.posts %}
   <div class="flex items-baseline justify-between border-b border-slate-400 py-4">
     <h2 class="text-white text-2xl leading-none"><a href="{{ post.url }}" class="block">{{ post.data.title }}</a></h2>
     <p class="text-slate-300 leading-none">{{ post.date | postDate }}</p>
