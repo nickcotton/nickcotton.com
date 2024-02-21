@@ -1,5 +1,6 @@
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 const { DateTime } = require('luxon');
+const taskLists = require('markdown-it-task-lists');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
@@ -43,6 +44,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("postDate", (dateObj) => DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED))
+
+  eleventyConfig.amendLibrary("md", mdLib => mdLib.use(taskLists));
 
   return {
     dir: {
