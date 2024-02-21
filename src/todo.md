@@ -17,10 +17,10 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [x] Depoly the site!
 - [x] Make this checkbox syntax work (think this is github flavoured markdown)
 - [ ] favicon
-- [ ] robots.txt
+- [x] robots.txt
 - [ ] sitemap.xml
 - [ ] 404 page
-- [ ] humans.txt
+- [x] humans.txt
 - [x] add an rss feed for posts
 - [ ] Write some articles to put in said RSS feed
 - [ ] dark/light mode
