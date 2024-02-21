@@ -1,0 +1,7 @@
+/* ME */
+Name: Nick Cotton
+Bio: Just me, standing on the shoulders of giants
+
+/* SITE */
+Built on Eleventy
+Last update 2024
