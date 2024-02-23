@@ -1,11 +1,13 @@
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const { DateTime } = require('luxon');
 const taskLists = require('markdown-it-task-lists');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { DateTime } = require('luxon');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('./src/images');
