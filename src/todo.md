@@ -18,9 +18,9 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 
 - [x] Depoly the site!
 - [x] Make this checkbox syntax work (think this is github flavoured markdown)
-- [ ] favicon
+- [x] favicon
 - [x] robots.txt
-- [ ] sitemap.xml
+- [x] sitemap.xml
 - [ ] 404 page
 - [x] humans.txt
 - [x] add an rss feed for posts
@@ -28,7 +28,7 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [ ] dark/light mode
 - [ ] dark/light mode toggle!
 - [ ] search
-- [ ] code highlighting
+- [x] code syntax highlighting
 - [x] some kind of analytics (not the bad one)
 
 </div>
