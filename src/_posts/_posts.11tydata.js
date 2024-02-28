@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   author: "Nick Cotton",
   layout: "layouts/post.liquid",
   permalink: function ({ page }) {
