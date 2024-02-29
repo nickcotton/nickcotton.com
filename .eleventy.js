@@ -1,10 +1,10 @@
-const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const taskLists = require('markdown-it-task-lists');
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const { DateTime } = require('luxon');
+import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import taskLists from 'markdown-it-task-lists';
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { DateTime } from 'luxon';
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);

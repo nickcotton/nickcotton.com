@@ -1,7 +1,7 @@
 import "./styles/main.css";
 
-import Alpine from "alpinejs";
-import persist from "@alpinejs/persist";
+import { Alpine } from "alpinejs";
+import { persist } from "@alpinejs/persist";
 
 window.Alpine = Alpine;
 
