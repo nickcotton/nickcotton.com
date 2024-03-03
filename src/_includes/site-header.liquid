@@ -11,7 +11,7 @@
           N<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[25px]">ick </span>
           C<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[45px]">otton</span></span>
       </a>
-      <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md pt-20 z-10" :class="open || 'hidden'">
+      <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md pt-20 z-10" x-cloak :class="open || 'hidden'">
         <ul class="flex flex-col md:flex-row md:items-center gap-y-8 gap-x-4 text-gray-900 md:text-stone-100">
           {% for item in navigation.items %}
             {% assign current = '' %}
