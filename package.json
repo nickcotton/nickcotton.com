@@ -70,6 +70,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "@alpinejs/persist": "^3.13.5",
+    "@splinetool/runtime": "^1.0.59",
     "alpinejs": "^3.13.5",
     "core-js": "^3.29.1",
     "luxon": "^3.4.4"
