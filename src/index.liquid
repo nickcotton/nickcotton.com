@@ -36,19 +36,19 @@ meta:
       @submit.prevent="submitForm">
       <p class="font-sans text-xl">
         <label for="name" class="block text-stone-100 mb-2">Your name</label>
-        <input id="name" name="name" type="text" class="w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900" />
+        <input x-model="formData.name" id="name" name="name" type="text" class="w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900" />
       </p>
       <p class="font-sans text-xl">
         <label for="email" class="block text-stone-100 mb-2">Your email</label>
-        <input id="email" name="email" type="email" class="w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900" />
+        <input x-model="formData.email" id="email" name="email" type="email" class="w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900" />
       </p>
       <p class="font-sans text-xl col-span-2">
         <label for="name" class="block text-stone-100 mb-2">Message</label>
-        <textarea name="message" rows="6" class="block w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900"></textarea>
+        <textarea x-model="formData.message" name="message" rows="6" class="block w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900"></textarea>
       </p>
       <p class="font-sans text-xl col-span-2 sm:col-span-1">
         <label for="movie" class="block text-stone-100 mb-2">Your favourite movie</label>
-        <input id="movie" name="movie" class="w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900" />
+        <input x-model="formData.favouriteMovie" id="movie" name="movie" class="w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900" />
       </p>
       <p class="col-span-2">
         <button type="submit" class="bg-blue-600 text-white font-montserrat py-2 px-8 font-medium rounded-md hover:bg-blue-500 transition-all duration-300" style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);">Send</button>
@@ -64,6 +64,7 @@ meta:
         name: "",
         email: "",
         message: "",
+        favouriteMovie: "",
       },
       submitForm() {
         console.log(JSON.stringify(this.formData));
