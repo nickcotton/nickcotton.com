@@ -13,5 +13,7 @@ document.addEventListener("alpine:init", () => {});
 Alpine.start();
 
 const canvas = document.getElementById("canvas3d");
-const app = new Application(canvas);
-app.load("https://prod.spline.design/hVsrYOWgXz-v8CVc/scene.splinecode");
+if (canvas) {
+  const app = new Application(canvas);
+  app.load("https://prod.spline.design/hVsrYOWgXz-v8CVc/scene.splinecode");
+}
