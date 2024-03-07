@@ -51,8 +51,8 @@ meta:
         <input x-model="formData.favouriteMovie" id="movie" name="movie" class="w-full p-2 mb-2 rounded-md bg-slate-800 focus:bg-stone-100 text-stone-100 focus:text-slate-900" />
       </p>
       <p class="col-span-2">
-        <button type="submit" class="bg-blue-600 text-white py-2 px-8 font-medium rounded-md hover:bg-blue-500 transition-all duration-300 relative"
-style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :disabled="buttonState !== 'ready'">
+        <button type="submit" class="bg-blue-600 text-white py-2 px-8 font-medium rounded-md hover:bg-blue-500 disabled:hover:bg-blue-600 transition-all duration-300 relative"
+style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :class="{'opacity-50 cursor-not-allowed': !isFormValid}" :disabled="!isFormValid || buttonState !== 'ready'">
           <span :class="{'opacity-0': buttonState !== 'ready'}" class="transition-opacity">Send</span>
           <span x-show="buttonState === 'loading'" x-transition class="absolute inset-0 flex justify-center items-center">
             <svg aria-hidden="true" role="status" class="inline w-4 h-4 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,6 +89,9 @@ style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :disabled="buttonSt
         favouriteMovie: "",
       },
       buttonState: "ready",
+      get isFormValid() {
+        return this.formData.name && this.formData.email && this.formData.message && this.formData.favouriteMovie;
+      },
       async submitForm() {
         this.buttonState = "loading";
         await sleep(1000);
