@@ -1,7 +1,7 @@
 <header>
-  <nav class="bg-slate-800">
+  <nav class="dark:bg-slate-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center gap-4" x-data="{open: false, toggle(){this.open = !this.open;}}">
-      <a href="/" class="font-serif font-bold flex items-end gap-1 group home relative z-20 mr-auto" :class="open ? 'text-gray-900' : 'text-stone-100'">
+      <a href="/" class="font-serif font-bold flex items-end gap-1 group home relative z-20 mr-auto" :class="open ? 'text-gray-900' : 'dark:text-stone-100'">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smart-home flip" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105"></path>
@@ -12,7 +12,7 @@
           C<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[45px]">otton</span></span>
       </a>
       <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md pt-20 z-10" x-cloak :class="open || 'hidden'">
-        <ul class="flex flex-col md:flex-row md:items-center gap-y-8 gap-x-4 text-gray-900 md:text-stone-100">
+        <ul class="flex flex-col md:flex-row md:items-center gap-y-8 gap-x-4 text-gray-900 dark:md:text-stone-100">
           {% for item in navigation.items %}
             {% assign current = '' %}
             {% assign letters = item.text | split: '' %}
@@ -55,7 +55,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
         </svg>
       </button>
-      <button class="md:hidden text-white" @click="toggle">
+      <button class="md:hidden dark:text-stone-100" @click="toggle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
           <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm8.25 5.25a.75.75 0 0 1 .75-.75h8.25a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
         </svg>
