@@ -35,8 +35,17 @@
     />
 
     <script defer src="https://analytics.eu.umami.is/script.js" data-website-id="6495564b-5949-4491-8c59-86ca25e8c37c"></script>
+
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body class="min-h-svh bg-slate-800 grid grid-rows-[min-content_1fr_16px]" data-env="{{ node.env }}">
+  <body class="min-h-svh bg-slate-800 text-stone-100 grid grid-rows-[min-content_1fr_16px]" data-env="{{ node.env }}">
     {% include 'site-header' %}
 
     <main class="mx-4 py-8 rounded-md bg-slate-900">
