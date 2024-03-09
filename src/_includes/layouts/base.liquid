@@ -1,6 +1,6 @@
 {%- capture fullUrl %}https://nickcotton.com{{ page.url }}{% endcapture -%}
 <!DOCTYPE html>
-<html class="leading-tight text-gray-900 antialiased" lang="en">
+<html class="dark leading-tight text-gray-900 antialiased" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,11 +35,18 @@
     />
 
     <script defer src="https://analytics.eu.umami.is/script.js" data-website-id="6495564b-5949-4491-8c59-86ca25e8c37c"></script>
+
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'light') {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body class="min-h-svh bg-slate-800 grid grid-rows-[min-content_1fr_16px]" data-env="{{ node.env }}">
+  <body class="min-h-svh bg-gray-100 dark:bg-slate-800 dark:text-stone-100 grid grid-rows-[min-content_1fr_16px]" data-env="{{ node.env }}">
     {% include 'site-header' %}
 
-    <main class="mx-4 py-8 rounded-md bg-slate-900">
+    <main class="mx-4 py-8 rounded-md bg-white dark:bg-slate-900">
       {{ content }}
     </main>
 
