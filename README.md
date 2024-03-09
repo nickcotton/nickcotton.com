@@ -22,9 +22,10 @@ the dependencies and validate that everything is running correctly.
 npm run dev
 ```
 
-Open http://localhost:3000/ to view it in your browser.
-
-The page will reload if you make file changes.
+```bash
+# creates a new post using the 11ty-np.json config
+npx eleventy-new-post
+```
 
 ### Production
 
