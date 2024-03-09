@@ -25,8 +25,8 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [x] humans.txt
 - [x] add an rss feed for posts
 - [ ] Write some articles to put in said RSS feed
-- [ ] dark/light mode
-- [ ] dark/light mode toggle!
+- [x] dark/light mode
+- [x] dark/light mode toggle!
 - [ ] search
 - [x] code syntax highlighting
 - [x] some kind of analytics (not the bad one)
