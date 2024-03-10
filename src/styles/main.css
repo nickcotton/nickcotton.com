@@ -193,3 +193,7 @@
  .token.entity {
    cursor: help;
  }
+
+ [x-cloak] {
+   display: none !important;
+ }
