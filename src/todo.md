@@ -31,5 +31,6 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [x] code syntax highlighting
 - [x] some kind of analytics (not the bad one)
 - [ ] blog post with an image to work out how to serve images nicely
+- [ ] a way to show what I've recently logged on Letterboxd/goodreads/other
 
 </div>
