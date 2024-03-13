@@ -32,5 +32,10 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [x] some kind of analytics (not the bad one)
 - [ ] blog post with an image to work out how to serve images nicely
 - [ ] a way to show what I've recently logged on Letterboxd/goodreads/other
+- [ ] a /now page
+- [ ] table of contents for long blog posts
+- [ ] custom ::selection styles
+- [ ] add a "skip to content" link for accessibility
+- [ ] add links to lots of references across the site that deserve to be linked
 
 </div>
