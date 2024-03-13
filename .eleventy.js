@@ -1,4 +1,5 @@
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
+import { EleventyRenderPlugin } from "@11ty/eleventy";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import taskLists from 'markdown-it-task-lists';
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -6,6 +7,7 @@ import { DateTime } from 'luxon';
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
