@@ -16,6 +16,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/public');
   eleventyConfig.addPassthroughCopy('./src/styles');
   eleventyConfig.addPassthroughCopy('./src/main.js');
+  eleventyConfig.addPassthroughCopy('./src/dev.js');
 
   eleventyConfig.setServerOptions({
     // Default values are shown:
