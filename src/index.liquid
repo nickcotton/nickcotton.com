@@ -27,20 +27,3 @@ meta:
   <p class="font-sans text-xl mb-3">Obsessed with performance, code quality, and accessibility.</p>
   {% comment %} <p class="font-sans text-stone-100 text-xl"><a href="#" class="underline">Get in touch</a>.</p> {% endcomment %}
 </div>
-
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
-  <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-none mb-5">What I'm watching</h2>
-  <ul class="list-none p-0 m-0 grid grid-cols-12 gap-4">
-    {% for film in letterboxd %}
-      <li>
-        <a href="{{ film.link }}">
-          <img src="{{ film.posterImageSrc }}" alt="{{ film.title }}" class="w-full h-auto">
-        </a>
-      </li>
-    {% endfor %}
-</div>
-
-
-
-
-
