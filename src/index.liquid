@@ -88,7 +88,7 @@ style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :class="{'opacity-5
         email: "",
         message: "",
         favouriteMovie: "",
-        'form-name': "contact",
+        "form-name": "contact",
       },
       buttonState: "ready",
       get isFormValid() {
@@ -96,14 +96,18 @@ style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :class="{'opacity-5
       },
       async submitForm() {
         this.buttonState = "loading";
+
+        const formData = new FormData();
+        Object.keys(this.formData).forEach(key => {
+          formData.append(key, this.formData[key]);
+        });
         await sleep(1000);
         fetch(location.href, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify(this.formData),
+          body: new URLSearchParams(formData).toString(),
         })
           .then(() => {
             this.buttonState = "success";
