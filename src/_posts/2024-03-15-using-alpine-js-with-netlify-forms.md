@@ -129,14 +129,14 @@ After a bit of digging, I [discovered](https://answers.netlify.com/t/netlify-for
 
 So what if we just manually add the value of that hidden form field to the formData object that we send over to Netlify.
 
-```js
+```diff-js
 function ContactForm() {
   return {
     formData: {
       name: "",
       email: "",
       message: "",
-      "form-name": "contact",
++     "form-name": "contact",
     }
   }
 }
