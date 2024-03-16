@@ -1,7 +1,7 @@
 ---
 title: Using Alpine.js with Netlify Forms
 toc:
-date: 2024-03-15
+date: 2024-03-16T21:28:09Z
 categories:
 ---
 
