@@ -34,6 +34,7 @@ meta:
       class="grid gap-8 grid-cols-2 max-w-xl"
       data-netlify="true"
       @submit.prevent="submitForm">
+      <input type="hidden" name="form-name" value="contact">
       <p class="font-sans text-xl">
         <label for="name" class="block mb-2">Your name</label>
         <input x-model="formData.name" id="name" name="name" type="text" class="w-full p-2 mb-2 rounded-md bg-gray-100 dark:bg-slate-800 focus:bg-stone-100 focus:text-slate-900" />
@@ -87,6 +88,7 @@ style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :class="{'opacity-5
         email: "",
         message: "",
         favouriteMovie: "",
+        "form-name": "contact",
       },
       buttonState: "ready",
       get isFormValid() {
@@ -94,14 +96,18 @@ style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :class="{'opacity-5
       },
       async submitForm() {
         this.buttonState = "loading";
+
+        const formData = new FormData();
+        Object.keys(this.formData).forEach(key => {
+          formData.append(key, this.formData[key]);
+        });
         await sleep(1000);
         fetch(location.href, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify(this.formData),
+          body: new URLSearchParams(formData).toString(),
         })
           .then(() => {
             this.buttonState = "success";
