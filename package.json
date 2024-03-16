@@ -60,7 +60,7 @@
     "postcss": "^8.4.35",
     "postcss-cli": "^10.1.0",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.11",
+    "prettier-plugin-tailwindcss": "^0.5.12",
     "rimraf": "^5.0.0",
     "rss-parser": "^3.13.0",
     "stylelint": "^16.2.1",
