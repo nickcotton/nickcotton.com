@@ -18,7 +18,7 @@ meta:
     {% for film in letterboxd limit:24 %}
       <li class="animate-rise-in" style="animation-fill-mode: backwards; --index: {{ forloop.index }}">
         <a href="{{ film.link }}" class="block border border-slate-300 dark:border-slate-500 rounded-sm overflow-hidden">
-          <img src="{{ film.posterImageSrc }}" alt="{{ film.title }}" class="w-full h-auto">
+          <img src="{{ film.posterImageSrc }}" alt="{{ film.title }}" class="w-full h-auto" eleventy:widths="400" width="400" height="600">
         </a>
       </li>
     {% endfor %}
