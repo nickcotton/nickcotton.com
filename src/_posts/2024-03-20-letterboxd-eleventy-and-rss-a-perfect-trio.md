@@ -171,6 +171,8 @@ export default async function () {
 {% endraw %}
 ```
 
+I'm not getting into a styling discussion here. Do as you please.
+
 ## Make it dynamic
 
 “But won't I have to rebuild my site any time the RSS feed is updated?”
