@@ -1,6 +1,6 @@
 ---
 title: Letterboxd, Eleventy and RSS - a Perfect Trio
-date: 2024-03-20
+date: 2024-03-21T21:21:21Z
 toc: true
 categories:
 ---
