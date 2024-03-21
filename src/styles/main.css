@@ -72,6 +72,10 @@
 
 .prose {
   text-wrap: pretty;
+
+  pre {
+    overscroll-behavior-x: contain;
+  }
 }
 
 /* Stagger reveal for film posters */
