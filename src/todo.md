@@ -24,18 +24,21 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [ ] 404 page
 - [x] humans.txt
 - [x] add an rss feed for posts
-- [ ] Write some articles to put in said RSS feed
+- [x] Write some articles to put in said RSS feed
 - [x] dark/light mode
 - [x] dark/light mode toggle!
 - [ ] search
 - [x] code syntax highlighting
 - [x] some kind of analytics (not the bad one)
-- [ ] blog post with an image to work out how to serve images nicely
-- [ ] a way to show what I've recently logged on Letterboxd/goodreads/other
-- [ ] a /now page
+- [x] blog post with an image to work out how to serve images nicely
+- [x] a way to show what I've recently logged on Letterboxd/goodreads/other
+- [x] a /now page
 - [ ] table of contents for long blog posts
 - [ ] custom ::selection styles
-- [ ] add a "skip to content" link for accessibility
+- [x] add a "skip to content" link for accessibility
 - [ ] add links to lots of references across the site that deserve to be linked
+- [ ] finish the projects/work section
+- [ ] figure out how to do responsive images properly
+- [ ] come up with a fun mobile interaction instead of the current hover styles for the logo
 
 </div>

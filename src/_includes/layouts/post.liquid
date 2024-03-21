@@ -2,9 +2,13 @@
 layout: 'layouts/base.liquid'
 ---
 
-<article class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+<article class="mx-auto w-[calc(100vw_-_2rem)] max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
   <h1 class="font-serif text-7xl text-center text-balance font-bold leading-none dark:text-stone-100 mb-10">{{ title }}</h1>
   <div class="mx-auto prose dark:prose-invert">
     {{ content }}
   </div>
 </article>
+
+<footer class="mt-6 px-4 md:px-0 mx-auto max-w-prose">
+  <p class="pt-6 border-t border-slate-400">Published on {{ page.date | postDate }} by {{ author }}</p>
+</footer>
