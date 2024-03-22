@@ -1,0 +1,38 @@
+[
+  {
+    "id": "papier",
+    "name": "Papier",
+    "images": [
+      {
+        "alt": "Papier homepage",
+        "caption": "Homepage"
+      },
+      {
+        "alt": "Papier product page",
+        "caption": "Product page"
+      },
+      {
+        "alt": "Papier personalisation editor",
+        "caption": "Personalisation editor"
+      },
+      {
+        "alt": "Papier checkout",
+        "caption": "Checkout"
+      }
+    ]
+  },
+  {
+    "id": "km",
+    "name": "King & McGaw",
+    "images": [
+      {
+        "alt": "King & McGaw homepage",
+        "caption": "Homepage"
+      },
+      {
+        "alt": "King & McGaw product page",
+        "caption": "Product page"
+      }
+    ]
+  }
+]
