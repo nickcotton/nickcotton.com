@@ -26,6 +26,7 @@ export default function (eleventyConfig) {
 	});
 
   // Static assets to pass through
+  eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/public');
   eleventyConfig.addPassthroughCopy('./src/styles');
