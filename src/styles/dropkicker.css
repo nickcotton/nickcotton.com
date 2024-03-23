@@ -2,61 +2,61 @@
 font-family: 'Dropkicker Regular';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker Regular'), url('Dropkicker-Regular.woff2') format('woff2');
+src: local('Dropkicker Regular'), url('/fonts/Dropkicker-Regular.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker Italic';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker Italic'), url('Dropkicker-Italic.woff2') format('woff2');
+src: local('Dropkicker Italic'), url('/fonts/Dropkicker-Italic.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker Thin';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker Thin'), url('Dropkicker-Thin.woff2') format('woff2');
+src: local('Dropkicker Thin'), url('/fonts/Dropkicker-Thin.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker Thin Italic';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker Thin Italic'), url('Dropkicker-ThinItalic.woff2') format('woff2');
+src: local('Dropkicker Thin Italic'), url('/fonts/Dropkicker-ThinItalic.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker SemiBold';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker SemiBold'), url('Dropkicker-SemiBold.woff2') format('woff2');
+src: local('Dropkicker SemiBold'), url('/fonts/Dropkicker-SemiBold.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker Bold';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker Bold'), url('Dropkicker-Bold.woff2') format('woff2');
+src: local('Dropkicker Bold'), url('/fonts/Dropkicker-Bold.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker Bold Italic';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker Bold Italic'), url('Dropkicker-BoldItalic.woff2') format('woff2');
+src: local('Dropkicker Bold Italic'), url('/fonts/Dropkicker-BoldItalic.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker ExtraBold';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker ExtraBold'), url('Dropkicker-ExtraBold.woff2') format('woff2');
+src: local('Dropkicker ExtraBold'), url('/fonts/Dropkicker-ExtraBold.woff2') format('woff2');
 }
 
 @font-face {
 font-family: 'Dropkicker ExtraBold Italic';
 font-style: normal;
 font-weight: normal;
-src: local('Dropkicker ExtraBold Italic'), url('Dropkicker-ExtraBoldItalic.woff2') format('woff2');
+src: local('Dropkicker ExtraBold Italic'), url('/fonts/Dropkicker-ExtraBoldItalic.woff2') format('woff2');
 }
