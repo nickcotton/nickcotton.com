@@ -1,3 +1,4 @@
+import { config as dotenvConfig } from 'dotenv';
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import pluginRss from "@11ty/eleventy-plugin-rss";
@@ -7,6 +8,8 @@ import { DateTime } from 'luxon';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default function (eleventyConfig) {
+  dotenvConfig();
+  eleventyConfig.addGlobalData('env', process.env);
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
