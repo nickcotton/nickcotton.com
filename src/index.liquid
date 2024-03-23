@@ -49,7 +49,7 @@ meta:
       </p>
       <p class="font-sans text-xl col-span-2 sm:col-span-1">
         <label for="movie" class="block mb-2">Your favourite movie</label>
-        <input x-model="formData.favouriteMovie" id="movie" name="movie" class="w-full p-2 mb-2 rounded-md bg-gray-100 dark:bg-slate-800 focus:bg-stone-100 focus:text-slate-900" />
+        <input x-model="formData.movie" id="movie" name="movie" class="w-full p-2 mb-2 rounded-md bg-gray-100 dark:bg-slate-800 focus:bg-stone-100 focus:text-slate-900" />
       </p>
       <p class="col-span-2">
         <button type="submit" class="bg-blue-600 text-white py-2 px-8 font-medium rounded-md hover:bg-blue-500 disabled:hover:bg-blue-600 transition-all duration-300 relative"
@@ -87,12 +87,12 @@ style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :class="{'opacity-5
         name: "",
         email: "",
         message: "",
-        favouriteMovie: "",
+        movie: "",
         "form-name": "contact",
       },
       buttonState: "ready",
       get isFormValid() {
-        return this.formData.name && this.formData.email && this.formData.message && this.formData.favouriteMovie;
+        return this.formData.name && this.formData.email && this.formData.message && this.formData.movie;
       },
       async submitForm() {
         this.buttonState = "loading";
@@ -114,7 +114,7 @@ style="box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);" :class="{'opacity-5
             this.formData.name = "";
             this.formData.email = "";
             this.formData.message = "";
-            this.formData.favouriteMovie = "";
+            this.formData.movie = "";
           })
           .catch((e) => {
             this.buttonState = "error";
