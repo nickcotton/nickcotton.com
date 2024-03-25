@@ -6,6 +6,7 @@ const queryData = {
   query: `
     query myReadingStates {
       myReadingStates {
+        status
         book {
           slug
           title
@@ -29,7 +30,10 @@ export default async function () {
     });
 
     const { data } = await response.json();
-    return data.myReadingStates || [];
+    const readingOrFinished = data.myReadingStates.filter(
+      (state) => state.status === "IS_READING" || state.status === "FINISHED",
+    );
+    return readingOrFinished || [];
   } catch (error) {
     console.log(error.message || error);
     return [];
