@@ -41,6 +41,7 @@
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@tailwindcss/typography": "^0.5.10",
@@ -57,8 +58,10 @@
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "luxon": "^3.4.4",
     "markdown-it-task-lists": "^2.1.1",
     "netlify-plugin-cache": "^1.0.3",
+    "node-fetch": "^3.3.2",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.38",
     "postcss-cli": "^10.1.0",
@@ -72,10 +75,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
     "@alpinejs/persist": "^3.13.7",
-    "alpinejs": "^3.13.7",
-    "core-js": "^3.36.1",
-    "luxon": "^3.4.4"
+    "alpinejs": "^3.13.7"
   }
 }
