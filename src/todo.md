@@ -34,11 +34,13 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [x] a way to show what I've recently logged on Letterboxd/goodreads/other
 - [x] a /now page
 - [ ] table of contents for long blog posts
-- [ ] custom ::selection styles
+- [x] custom ::selection styles
 - [x] add a "skip to content" link for accessibility
 - [ ] add links to lots of references across the site that deserve to be linked
-- [ ] finish the projects/work section
+- [x] finish the projects/work section
 - [ ] figure out how to do responsive images properly
 - [ ] come up with a fun mobile interaction instead of the current hover styles for the logo
+- [ ] Fix images in the RSS feed (something to do with the RSS/Image Eleventy plugins)
+- [ ] Replace the home icon with something a little more personal/unique
 
 </div>
