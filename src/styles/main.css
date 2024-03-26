@@ -4,24 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px) rotateY(180deg);
-  }
-
-  100% {
-    transform: translateY(0) rotateY(360deg);
-  }
-}
-
-.home:hover .flip {
-  animation: jump 0.3s 1;
-}
-
 @keyframes rise {
   to {
     opacity: 1;
