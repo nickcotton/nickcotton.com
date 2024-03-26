@@ -2,7 +2,11 @@
   "extends": ["stylelint-config-standard"],
   "plugins": ["stylelint-order"],
   "rules": {
-    "declaration-property-value-no-unknown": true,
+    "declaration-property-value-no-unknown": [true, {
+      "typesSyntax": {
+        "color": "| oklch( [ <percentage> | <number> | none] [ <percentage> | <number> | none] [ <hue> | none] [ / [<alpha-value> | none] ]? )"
+      }
+    }],
     "no-descending-specificity": null,
     "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": true,
