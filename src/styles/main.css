@@ -242,3 +242,8 @@ pre[class*="language-"] {
 [x-cloak] {
   display: none !important;
 }
+
+::selection {
+  background-color: oklch(85.88% 0.2024 88.0084deg);
+  color: #2E3440;
+}
