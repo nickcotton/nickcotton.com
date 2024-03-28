@@ -11,7 +11,7 @@
           N<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[25px]">ick </span>
           C<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[45px]">otton</span></span>
       </a>
-      <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md pt-20 z-10" x-cloak :class="open || 'hidden'">
+      <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md py-20 z-10 overflow-y-auto" x-cloak :class="open || 'hidden'">
         <ul class="flex flex-col md:flex-row md:items-center gap-y-8 gap-x-4 text-gray-900 dark:md:text-stone-100">
           {% for item in navigation.items %}
             {% assign current = '' %}
@@ -32,7 +32,7 @@
               </a>
             </li>
           {% endfor %}
-          <li class="flex justify-center">
+          <li class="flex justify-center pb-20 md:pb-0">
             <a href="/feed.xml" aria-label="RSS feed">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                 <path d="M3.75 3a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 0 0 .75-.75V16C17 8.82 11.18 3 4 3h-.25Z" />
