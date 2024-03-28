@@ -45,7 +45,7 @@
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@playwright/test": "^1.42.1",
-    "@tailwindcss/typography": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.12",
     "@types/node": "^20.11.30",
     "autoprefixer": "^10.4.19",
     "browserslist": "^4.23.0",
@@ -68,13 +68,13 @@
     "postcss": "^8.4.38",
     "postcss-cli": "^10.1.0",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.12",
+    "prettier-plugin-tailwindcss": "^0.5.13",
     "rimraf": "^5.0.5",
     "rss-parser": "^3.13.0",
     "stylelint": "^16.3.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-order": "^6.0.4",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.3"
   },
   "dependencies": {
     "@alpinejs/persist": "^3.13.7",
