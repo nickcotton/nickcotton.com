@@ -22,3 +22,7 @@ report.html
 
 # Mac files
 .DS_Store
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
