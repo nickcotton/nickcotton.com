@@ -42,5 +42,7 @@ Maybe (probably?) this has already been done before and I'm stealing someone's t
 - [ ] come up with a fun mobile interaction instead of the current hover styles for the logo
 - [ ] Fix images in the RSS feed (something to do with the RSS/Image Eleventy plugins)
 - [ ] Replace the home icon with something a little more personal/unique
+- [ ] Some kind of CMS for posting
+- [ ] e2e tests to stop me breaking stuff
 
 </div>
