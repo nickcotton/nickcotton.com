@@ -25,7 +25,7 @@ meta:
   </h1>
   <p class="font-sans text-xl mb-3">Front-end developer.</p>
   <p class="font-sans text-xl mb-3">Obsessed with performance, code quality, and accessibility.</p>
-  <p class="font-sans text-xl mb-3"><a href="#" class="underline" @click="toggle">Get in touch</a>.</p>
+  <p class="font-sans text-xl mb-3"><a href="#" class="underline" @click.prevent="toggle">Get in touch</a>.</p>
 
   <div x-show="open" x-data="ContactForm()" x-cloak x-transition>
     <form
