@@ -13,7 +13,7 @@
       </a>
       <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md py-20 z-10 overflow-y-auto" x-cloak :class="navOpen || 'hidden'">
         <ul class="flex flex-col md:flex-row md:items-center gap-y-8 gap-x-4 text-gray-900 dark:md:text-stone-100">
-          {% for item in navigation.items %}
+          {% for item in navigation.header %}
             {% assign current = '' %}
             {% assign letters = item.text | split: '' %}
             {% if item.url == page.url %}

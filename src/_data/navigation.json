@@ -1,5 +1,5 @@
 {
-  "items": [
+  "header": [
     {
       "text": "about",
       "url": "/about/"
@@ -9,20 +9,38 @@
       "url": "/projects/"
     },
     {
-      "text": "/now",
-      "url": "/now/"
+      "text": "blog",
+      "url": "/blog/"
+    }
+  ],
+  "footer": [
+    {
+      "text": "home",
+      "url": "/"
+    },
+    {
+      "text": "about",
+      "url": "/about/"
+    },
+    {
+      "text": "projects",
+      "url": "/projects/"
+    },
+    {
+      "text": "blog",
+      "url": "/blog/"
+    },
+    {
+      "text": "meta",
+      "url": "/meta/"
     },
     {
       "text": "/uses",
       "url": "/uses/"
     },
     {
-      "text": "/todo",
-      "url": "/todo/"
-    },
-    {
-      "text": "blog",
-      "url": "/blog/"
+      "text": "/now",
+      "url": "/now/"
     }
   ]
 }
