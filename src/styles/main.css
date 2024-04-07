@@ -42,11 +42,10 @@
 }
 
 .nav-letter {
-  font-weight: 200;
   transition: font-weight 0.2s ease-in-out;
 }
 
-@media (width >= 768px) {
+@media (pointer: fine) {
   .nav-letter {
     font-weight: 400;
   }
