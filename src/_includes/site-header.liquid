@@ -1,63 +1,43 @@
-<header>
-  <nav class="dark:bg-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center gap-4" x-data="{open: false, toggle(){this.open = !this.open;}}">
-      <a href="/" class="font-serif font-bold flex items-end gap-1 group home relative z-20 mr-auto" :class="open ? 'text-gray-900' : 'dark:text-stone-100'">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smart-home flip" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105"></path>
-          <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0"></path>
-        </svg>
-        <span class="flex">
-          N<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[25px]">ick </span>
-          C<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[45px]">otton</span></span>
-      </a>
-      <nav class="fixed md:static flex justify-center md:contents inset-1 bg-white shadow-md rounded-md py-20 z-10 overflow-y-auto" x-cloak :class="open || 'hidden'">
-        <ul class="flex flex-col md:flex-row md:items-center gap-y-8 gap-x-4 text-gray-900 dark:md:text-stone-100">
-          {% for item in navigation.items %}
-            {% assign current = '' %}
-            {% assign letters = item.text | split: '' %}
-            {% if item.url == page.url %}
-              {% assign current = 'aria-current="page"' %}
-              {% assign highlight = 'cursor-default' %}
-            {% endif %}
-            <li>
-              <a
-                href="{{ item.url }}"
-                class="text-7xl md:text-base flex justify-center {{ highlight }}"
-                {{ current }}
-              >
-                {% for letter in letters %}
-                  <span class="nav-letter">{{ letter }}</span>
-                {% endfor %}
-              </a>
-            </li>
-          {% endfor %}
-          <li class="flex justify-center pb-20 md:pb-0">
-            <a href="/feed.xml" aria-label="RSS feed">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path d="M3.75 3a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 0 0 .75-.75V16C17 8.82 11.18 3 4 3h-.25Z" />
-                <path d="M3 8.75A.75.75 0 0 1 3.75 8H4a8 8 0 0 1 8 8v.25a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1-.75-.75V16a6 6 0 0 0-6-6h-.25A.75.75 0 0 1 3 9.25v-.5ZM7 15a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-              </svg>
+<header class="sticky top-0">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center gap-3 sm:gap-4">
+    <a href="/" class="font-serif font-bold flex items-end gap-1 group home relative z-20 mr-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smart-home flip" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105"></path>
+        <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0"></path>
+      </svg>
+      <span class="flex">
+        N<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[25px]">ick&nbsp;</span>
+        C<span class="overflow-hidden transition-all opacity-0 w-0 group-hover:opacity-100 group-hover:w-[45px]">otton</span></span>
+    </a>
+    <nav class="text-sm sm:text-base">
+      <ul class="flex justify-center gap-3">
+        {% for item in navigation.header %}
+          {% assign current = '' %}
+          {% assign letters = item.text | split: '' %}
+          {% if item.url == page.url %}
+            {% assign current = 'aria-current="page"' %}
+            {% assign highlight = 'cursor-default' %}
+          {% endif %}
+          <li>
+            <a
+              href="{{ item.url }}"
+              class="flex justify-center {{ highlight }}"
+              {{ current }}
+            >
+              {% for letter in letters %}
+                <span class="nav-letter">{{ letter }}</span>
+              {% endfor %}
             </a>
           </li>
-        </ul>
-        <button class="text-gray-900 absolute top-4 right-3" :class="open || 'hidden'" @click="toggle">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-          </svg>
-        </button>
-      </nav>
-      <button class="flex h-5 w-5 items-center justify-center ml-auto md:ml-0" onclick="document.documentElement.classList.toggle('dark'); document.documentElement.classList.toggle('light'); localStorage.theme = localStorage.theme === 'light' ? 'dark' : 'light'">
-        <svg width="16" height="16" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M100 200C155.228 200 200 155.228 200 100C200 44.7715 155.228 0 100 0C44.7715 0 0 44.7715 0 100C0 155.228 44.7715 200 100 200ZM100 190C149.706 190 190 149.706 190 100C190 50.2944 149.706 10 100 10C50.2944 10 10 50.2944 10 100C10 149.706 50.2944 190 100 190Z" fill="currentColor"/>
-          <path d="M100 180C89.4942 180 79.0914 177.931 69.3853 173.91C59.6793 169.89 50.8601 163.997 43.4315 156.569C36.0028 149.14 30.11 140.321 26.0896 130.615C22.0693 120.909 20 110.506 20 100C20 89.4942 22.0693 79.0914 26.0896 69.3853C30.11 59.6793 36.0028 50.8601 43.4315 43.4314C50.8601 36.0028 59.6793 30.11 69.3853 26.0896C79.0914 22.0693 89.4943 20 100 20L100 100L100 180Z" fill="currentColor"/>
-        </svg>
-      </button>
-      <button class="md:hidden dark:text-stone-100" @click="toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm8.25 5.25a.75.75 0 0 1 .75-.75h8.25a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-        </svg>
-      </button>
-    </div>
-  </nav>
+        {% endfor %}
+      </ul>
+    </nav>
+    <button class="flex h-5 w-5 items-center justify-center" onclick="document.documentElement.classList.toggle('dark'); document.documentElement.classList.toggle('light'); localStorage.theme = localStorage.theme === 'light' ? 'dark' : 'light'">
+      <svg width="16" height="16" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M100 200C155.228 200 200 155.228 200 100C200 44.7715 155.228 0 100 0C44.7715 0 0 44.7715 0 100C0 155.228 44.7715 200 100 200ZM100 190C149.706 190 190 149.706 190 100C190 50.2944 149.706 10 100 10C50.2944 10 10 50.2944 10 100C10 149.706 50.2944 190 100 190Z" fill="currentColor"/>
+        <path d="M100 180C89.4942 180 79.0914 177.931 69.3853 173.91C59.6793 169.89 50.8601 163.997 43.4315 156.569C36.0028 149.14 30.11 140.321 26.0896 130.615C22.0693 120.909 20 110.506 20 100C20 89.4942 22.0693 79.0914 26.0896 69.3853C30.11 59.6793 36.0028 50.8601 43.4315 43.4314C50.8601 36.0028 59.6793 30.11 69.3853 26.0896C79.0914 22.0693 89.4943 20 100 20L100 100L100 180Z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
 </header>
