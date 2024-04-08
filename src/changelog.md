@@ -7,6 +7,14 @@ meta:
 
 ## 2024
 
+### April 8
+
+- Added a GitHub Action to run some playwright tests on every pull request to the site (yes I do PRs to my own site). Very simple for now (it literally checks that the homepage has my name in the title) but as I build them out this will give me the confidence I'm not breaking things unexpectedly.
+
+### April 7
+
+- Added main nav items inline instead of behind a burger menu which removed a lot of annoying code.
+
 ### April 6
 
 - Added a new [meta](/meta/) page to keep info about how the site is put together. Links out to the changelog and todo pages.
