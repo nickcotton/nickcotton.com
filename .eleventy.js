@@ -11,7 +11,11 @@ import Image from "@11ty/eleventy-img";
 export default function (eleventyConfig) {
   dotenvConfig();
   eleventyConfig.addGlobalData('env', process.env);
-  eleventyConfig.addPlugin(EleventyVitePlugin);
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    viteOptions: {
+      assetsInclude: ['**/*.xml'],
+    }
+  });
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
