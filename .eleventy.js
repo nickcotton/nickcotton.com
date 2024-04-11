@@ -6,6 +6,7 @@ import taskLists from 'markdown-it-task-lists';
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { DateTime } from 'luxon';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import Image from "@11ty/eleventy-img";
 
 export default function (eleventyConfig) {
   dotenvConfig();
@@ -28,6 +29,25 @@ export default function (eleventyConfig) {
     urlPath: "/images/",
 	});
 
+  eleventyConfig.addShortcode("image", async function (src, alt, sizes) {
+		let metadata = await Image(src, {
+			widths: [300, 600, 1200, 2400, "auto"],
+			formats: ["avif", "webp", "auto"],
+      urlPath: "/images/",
+      outputDir: "./_site/images/",
+		});
+
+		let imageAttributes = {
+			alt,
+			sizes,
+			loading: "lazy",
+			decoding: "async",
+      "eleventy:ignore": "",
+		};
+
+		return Image.generateHTML(metadata, imageAttributes);
+	});
+
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/images');
@@ -35,6 +55,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/styles');
   eleventyConfig.addPassthroughCopy('./src/main.js');
   eleventyConfig.addPassthroughCopy('./src/dev.js');
+  eleventyConfig.addPassthroughCopy('./src/images', './_site/assets/images');
 
   eleventyConfig.setServerOptions({
     // Default values are shown:
