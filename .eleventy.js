@@ -59,6 +59,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/styles');
   eleventyConfig.addPassthroughCopy('./src/main.js');
   eleventyConfig.addPassthroughCopy('./src/dev.js');
+  eleventyConfig.addPassthroughCopy('./src/images', './_site/assets/images');
 
   eleventyConfig.setServerOptions({
     // Default values are shown:
