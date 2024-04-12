@@ -6,8 +6,8 @@ meta:
     'The blog part.'
 ---
 
-<div class="grid grid-cols-4 gap-16">
-  <div class="col-span-3">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-x-16 gap-y-8">
+  <div class="md:col-span-8 lg:col-span-9">
     <h2 class="font-serif text-2xl md:text-4xl font-bold leading-none mb-5">Latest posts</h2>
     {% for post in collections.posts reversed %}
       <div class="flex flex-col sm:flex-row gap-x-6 gap-y-2 items-baseline justify-between border-b border-slate-400 dark:border-slate-700 py-4 last:border-b-0">
@@ -16,8 +16,8 @@ meta:
       </div>
     {% endfor %}
   </div>
-  <aside>
-    <header class="flex items-center justify-between gap-3 mt-2 mb-5">
+  <aside class="md:col-span-4 lg:col-span-3">
+    <header class="flex items-center justify-between gap-3 md:mt-2 mb-5">
       <h2 class="font-serif text-xl md:text-2xl font-bold leading-none">Blogroll</h2>
       <a href="/blogroll.opml.xml" class="flex items-center gap-1 rounded-xl bg-gray-300 dark:bg-slate-600 px-2 py-1 text-xs" download>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
