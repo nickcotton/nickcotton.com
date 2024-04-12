@@ -7,6 +7,10 @@ meta:
 
 ## 2024
 
+### April 12
+
+- Added a blogroll to the [blog](/blog/).
+
 ### April 8
 
 - Added a GitHub Action to run some playwright tests on every pull request to the site (yes I do PRs to my own site). Very simple for now (it literally checks that the homepage has my name in the title) but as I build them out this will give me the confidence I'm not breaking things unexpectedly.
