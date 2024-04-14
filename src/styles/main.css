@@ -246,3 +246,19 @@ pre[class*="language-"] {
   background-color: oklch(85.88% 0.2024 88.0084deg);
   color: #2E3440;
 }
+
+.back-to-top {
+  animation: come-on-up linear;
+  animation-range-start: entry;
+  animation-timeline: view();
+}
+
+@keyframes come-on-up {
+  from {
+    transform: translateY(200px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
