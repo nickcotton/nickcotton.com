@@ -6,6 +6,7 @@ import taskLists from 'markdown-it-task-lists';
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { DateTime } from 'luxon';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { EleventyPluginCodeDemo } from "@ktsn/eleventy-plugin-code-demo";
 
 export default function (eleventyConfig) {
   dotenvConfig();
@@ -27,6 +28,60 @@ export default function (eleventyConfig) {
 
     urlPath: "/images/",
 	});
+
+  eleventyConfig.addPlugin(EleventyPluginCodeDemo, {
+    name: "codeDemoPreview",
+
+    /* Render whatever document structure you want. The HTML, CSS, and JS parsed
+    from the shortcode's body are supplied to this function as an argument, so
+    you can position them wherever you want, or add class names or data-attributes to html/body */
+    renderDocument: ({ html, css, js }) => `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>${css}</style>
+      </head>
+      <body>
+        ${html}
+        <script>${js}</script>
+      </body>
+    </html>`,
+
+    // key-value pairs for HTML attributes; these are applied to all code previews
+    iframeAttributes: {
+      height: '300',
+      style: 'width: 100%;',
+      frameborder: '0',
+    },
+
+    // Specify preprocessors. Object key is input source type. You must return an object having
+    // output `type` (either 'js', 'css' or 'html') and proprocessed `output` string.
+    preprocess: {
+      ts: (source) => {
+        return {
+          type: 'js',
+          output: compileTypeScript(source),
+        };
+      },
+    },
+  });
+
+  eleventyConfig.addPairedShortcode("codeDemo", (html, css, js) => {
+    const previewPlugin = eleventyConfig.plugins.find((plugin) => plugin.options?.name === "codeDemoPreview").plugin;
+    return `
+      <div class="code-demo">
+        <div class="code-demo__preview">
+          ${previewPlugin(eleventyConfig, {html, css, js}) }
+        </div>
+        <div class="code-demo__code">
+          <pre class="code-demo__code-html"><code>${html}</code></pre>
+          <pre class="code-demo__code-css"><code>${css}</code></pre>
+          <pre class="code-demo__code-js"><code>${js}</code></pre>
+        </div>
+      </div>
+    `;
+
+  });
 
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('./src/fonts');
