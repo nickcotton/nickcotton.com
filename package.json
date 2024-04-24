@@ -84,6 +84,6 @@
   },
   "dependencies": {
     "@alpinejs/persist": "^3.13.8",
-    "alpinejs": "^3.13.8"
+    "alpinejs": "^3.13.10"
   }
 }
