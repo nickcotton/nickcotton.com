@@ -246,3 +246,67 @@ pre[class*="language-"] {
   background-color: oklch(85.88% 0.2024 88.0084deg);
   color: #2E3440;
 }
+
+.code-demo {
+  background-color:#121212;
+  border-radius: 0.375rem;
+  color:#dbd7caee;
+}
+
+.tabs {
+  border-bottom: 1px solid oklch(40% 0 0deg);
+
+  input + label {
+    cursor: pointer;
+    position: relative;
+  }
+
+  input:checked + label {
+    cursor: default;
+  }
+
+  input + label::after {
+    background-color: oklch(85.88% 0.2024 88.0084deg);
+    bottom: 0;
+    box-shadow: 0 0 5px oklch(85.88% 0.2024 88.0084deg);;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  input:checked + label::after {
+    opacity: 1;
+  }
+}
+
+/* Initially hide all tab panes */
+.tab-pane {
+  aspect-ratio: 16 / 9;
+  display: none;
+  overflow: auto;
+
+  pre {
+    border-radius: 0.375rem;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1.7143;
+    margin-bottom: 1.7143em;
+    overflow-x: auto;
+    padding-bottom: 0.8571em;
+    padding-inline: 1.1429em;
+    padding-top: 0.8571em;
+  }
+}
+
+/* Show the tab pane when the corresponding radio button is selected */
+.tabs:has(.html:checked) ~ .tab-content .html,
+.tabs:has(.css:checked) ~ .tab-content .css,
+.tabs:has(.js:checked) ~ .tab-content .js,
+.tabs:has(.preview:checked) ~ .tab-content .preview {
+  display: block;
+}
