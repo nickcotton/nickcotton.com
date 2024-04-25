@@ -1,5 +1,3 @@
-import "./styles/main.css";
-
 import { Alpine } from "alpinejs";
 import { persist } from "@alpinejs/persist";
 
