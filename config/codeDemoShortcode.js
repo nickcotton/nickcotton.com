@@ -33,7 +33,7 @@ const renderDocument = ({ html, css, js }) => `
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>${css}</style>
   </head>
   <body>
