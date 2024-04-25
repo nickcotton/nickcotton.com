@@ -1,6 +1,6 @@
 ---
 title: Building a back to top link using CSS scroll-driven animations
-date: 2024-04-24
+date: 2024-04-25
 toc:
 categories:
 ---
