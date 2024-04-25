@@ -6,6 +6,7 @@ import taskLists from 'markdown-it-task-lists';
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { DateTime } from 'luxon';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import codeDemoShortcode from './config/codeDemoShortcode.js';
 
 export default function (eleventyConfig) {
   dotenvConfig();
@@ -27,6 +28,8 @@ export default function (eleventyConfig) {
 
     urlPath: "/images/",
 	});
+
+  eleventyConfig.addPairedShortcode("codeDemo", codeDemoShortcode);
 
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('./src/fonts');

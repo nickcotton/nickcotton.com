@@ -7,6 +7,10 @@ meta:
 
 ## 2024
 
+### April 25
+
+- Update my [London coffee](/blog/london-coffee/) list.
+
 ### April 12
 
 - Added a blogroll to the [blog](/blog/).
