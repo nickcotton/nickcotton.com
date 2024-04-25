@@ -13,7 +13,8 @@ My top places for coffee in London.
 - Friends of Ours
 - Colonna & Small's
 - Brunswick East
-- Jolene
+- Jolene (any of them)
+- Rosslyn (any of them)
 
 RIP
 
