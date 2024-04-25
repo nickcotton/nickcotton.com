@@ -33,6 +33,7 @@ const renderDocument = ({ html, css, js }) => `
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/styles/main.css">
     <style>${css}</style>
   </head>
   <body>
