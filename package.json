@@ -45,7 +45,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.1.0",
     "@playwright/test": "^1.43.1",
-    "@tailwindcss/typography": "^0.5.12",
+    "@tailwindcss/typography": "^0.5.13",
     "@types/node": "^20.12.7",
     "autoprefixer": "^10.4.19",
     "browserslist": "^4.23.0",
