@@ -4,5 +4,6 @@ layout: 'layouts/base.liquid'
 
 <article class="mx-auto w-[calc(100vw_-_2rem)] max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
   <h1 class="font-serif text-7xl text-center font-bold leading-none mb-10">{{ title }}</h1>
+  {% if subtitle %}<p class="text-center text-xl font-semibold -mt-5 mb-10">{{ subtitle }}</p>{% endif %}
   {{ content }}
 </article>

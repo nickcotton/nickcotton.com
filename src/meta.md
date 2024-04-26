@@ -7,6 +7,8 @@ meta:
 
 Pages about the inner workings of this site.
 
+[How this site is put together](/meta/docs/)
+
 [Changelog](/changelog/)
 
 [Todo](/todo/)
