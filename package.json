@@ -43,7 +43,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@playwright/test": "^1.43.1",
     "@tailwindcss/typography": "^0.5.12",
     "@types/node": "^20.12.7",
