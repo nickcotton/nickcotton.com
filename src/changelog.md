@@ -7,6 +7,14 @@ meta:
 
 ## 2024
 
+### April 27
+
+- Added a [docs](/meta/docs/) page to document how the site it built and structured.
+
+### April 26
+
+- Added a back-to-top link for a11y purposes. It should appear after scrolling some distance down a page if your browser supports css scroll driven animations, otherwise it will always show.
+
 ### April 25
 
 - Update my [London coffee](/blog/london-coffee/) list.
