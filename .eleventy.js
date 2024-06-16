@@ -26,7 +26,7 @@ export default function (eleventyConfig) {
 			language: "en",
 			title: "Nick Cotton - Blog",
 			subtitle: "How Good",
-			base: process.env.BASE_URL,
+			base: "https://nickcotton.com",
 			author: {
 				name: "Nick Cotton",
 				email: "", // Optional
