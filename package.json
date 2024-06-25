@@ -41,7 +41,7 @@
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-rss": "^2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy-plugin-vite": "github:11ty/eleventy-plugin-vite#v5.0.0-alpha.1",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@playwright/test": "^1.44.1",
