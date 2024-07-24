@@ -34,19 +34,6 @@ export default function (eleventyConfig) {
 		}
   });
 
-  // TODO: can be removed once this is merged:
-  // https://github.com/11ty/eleventy-plugin-rss/pull/51
-  // Get the first `n` elements of a collection.
-  eleventyConfig.addFilter('head', function(array, n) {
-    if(!n || n === 0) {
-      return array;
-    }
-    if(n < 0) {
-      throw new Error("`collection.limit` option must be a positive number.");
-    }
-    return array.slice(0, n);
-  });
-
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// which file extensions to process
 		extensions: "html",
