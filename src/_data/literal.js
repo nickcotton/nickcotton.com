@@ -37,7 +37,7 @@ export default async function () {
     const readingOrFinished = data.myReadingStates.filter(
       (state) => state.status === "IS_READING" || state.status === "FINISHED",
     );
-    return readingOrFinished || [];
+    return readingOrFinished.reverse() || [];
   } catch (error) {
     console.log(error.message || error);
     return [];
