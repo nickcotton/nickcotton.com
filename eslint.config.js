@@ -9,6 +9,7 @@ const jsConfig = {
   files: ["**/*.js"],
   ...js.configs.recommended,
   ...importPlugin.flatConfigs.recommended,
+  ...pluginPromise.configs["flat/recommended"],
 };
 
 const jsonConfig = {
@@ -19,8 +20,6 @@ const jsonConfig = {
 };
 
 export default [
-  pluginPromise.configs["flat/recommended"],
-
   jsConfig,
   jsonConfig,
   {
