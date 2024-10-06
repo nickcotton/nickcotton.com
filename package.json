@@ -37,11 +37,11 @@
     "setup": "npm install && npm run validate"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.20",
-    "@11ty/eleventy-img": "5.0.0-beta.10",
+    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy-img": "5.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11ty/eleventy-plugin-vite": "github:11ty/eleventy-plugin-vite#v5.0.0-alpha.4",
+    "@11ty/eleventy-plugin-vite": "5.0.0",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/compat": "^1.2.0",
