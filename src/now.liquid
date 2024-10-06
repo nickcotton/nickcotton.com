@@ -7,36 +7,6 @@ meta:
 
 <div class="mx-auto prose dark:prose-invert mb-32">
   {% renderFile "./src/_includes/now-content.md" %}
-
-  <div class="tabs has-[input:nth-of-type(1)] relative grid h-12 auto-cols-fr grid-flow-col rounded-lg border-4 border-black bg-black after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:top-0 after:w-[calc(100%/var(--count,4))] after:translate-x-[calc(var(--active,0)*100%)] after:rounded-md after:bg-white after:mix-blend-difference after:outline after:outline-2 after:outline-transparent after:transition-[transform,outline] after:duration-200 after:content-[''] has-[input:nth-of-type(2)]:[--count:2] has-[input:nth-of-type(3)]:[--count:3] has-[input:nth-of-type(4)]:[--count:4] has-[:checked:nth-of-type(1)]:[--active:0] has-[:checked:nth-of-type(2)]:[--active:1] has-[:checked:nth-of-type(3)]:[--active:2] has-[:checked:nth-of-type(4)]:[--active:3] has-[:focus-visible]:after:outline-red-500">
-    <input checked type="radio" id="html" name="fav_language" value="HTML" class="sr-only [&:checked+label]:[--highlight:1;] [&:not(:checked)+label:hover]:bg-[hsl(0,0%,20%)] [&:not(:checked)+label:hover]:[--highlight:0.35;]" />
-    <label class="grid h-full cursor-pointer place-items-center rounded-md px-[clamp(0.5rem,2vw+0.25rem,2rem)] text-center text-[hsla(0,0%,100%,calc(0.5+var(--highlight,0)))]" for="html">HTML</label>
-    <input type="radio" id="css" name="fav_language" value="CSS" class="sr-only [&:checked+label]:[--highlight:1;] [&:not(:checked)+label:hover]:bg-[hsl(0,0%,20%)] [&:not(:checked)+label:hover]:[--highlight:0.35;]" />
-    <label class="grid h-full cursor-pointer place-items-center rounded-md px-[clamp(0.5rem,2vw+0.25rem,2rem)] text-center text-[hsla(0,0%,100%,calc(0.5+var(--highlight,0)))]" for="css">CSS</label>
-    <input type="radio" id="javascript" name="fav_language" value="JavaScript" class="sr-only [&:checked+label]:[--highlight:1;] [&:not(:checked)+label:hover]:bg-[hsl(0,0%,20%)] [&:not(:checked)+label:hover]:[--highlight:0.35;]" />
-    <label class="grid h-full cursor-pointer place-items-center rounded-md px-[clamp(0.5rem,2vw+0.25rem,2rem)] text-center text-[hsla(0,0%,100%,calc(0.5+var(--highlight,0)))]" for="javascript">JavaScript</label>
-    <input type="radio" id="preview" name="fav_language" value="Preview" class="sr-only [&:checked+label]:[--highlight:1;] [&:not(:checked)+label:hover]:bg-[hsl(0,0%,20%)] [&:not(:checked)+label:hover]:[--highlight:0.35;]" />
-    <label class="grid h-full cursor-pointer place-items-center rounded-md px-[clamp(0.5rem,2vw+0.25rem,2rem)] text-center text-[hsla(0,0%,100%,calc(0.5+var(--highlight,0)))]" for="preview">Preview</label>
-  </div>
-
-  <div class="tab-content">
-    <div class="tab-pane" id="html">
-      <h3>HTML</h3>
-      <pre><code>HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</code></pre>
-    </div>
-    <div class="tab-pane" id="css">
-      <h3>CSS</h3>
-      <pre><code>CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</code></pre>
-    </div>
-    <div class="tab-pane" id="javascript">
-      <h3>JavaScript</h3>
-      <pre><code>JavaScript is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</code></pre>
-    </div>
-    <div class="tab-pane" id="preview">
-      <h3>Preview</h3>
-      <pre><code>Preview is a feature that allows you to see how your content will look before you publish it. It's a great way to make sure everything looks just right before you share it with the world.</code></pre>
-    </div>
-  </div>
 </div>
 
 <section class="mx-auto max-w-7xl mb-16">
