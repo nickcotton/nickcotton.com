@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.liquid", "./src/**/*.md"],
+  safelist: ["sr-only"],
   theme: {
     extend: {
       fontFamily: {
