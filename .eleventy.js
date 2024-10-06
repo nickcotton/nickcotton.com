@@ -1,7 +1,7 @@
 import { config as dotenvConfig } from 'dotenv';
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
 import { EleventyRenderPlugin } from "@11ty/eleventy";
-import pluginRss from "@11ty/eleventy-plugin-rss";
+import { feedPlugin, dateToRfc822 } from "@11ty/eleventy-plugin-rss";
 import taskLists from 'markdown-it-task-lists';
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { DateTime } from 'luxon';
@@ -13,8 +13,26 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData('env', process.env);
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
-  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts", // iterate over `collections.posts`
+			limit: 0,      // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "Nick Cotton - Blog",
+			subtitle: "How Good",
+			base: "https://nickcotton.com",
+			author: {
+				name: "Nick Cotton",
+				email: "", // Optional
+			}
+		}
+  });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// which file extensions to process
@@ -72,6 +90,8 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("postDate", (dateObj) => DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED))
+
+  eleventyConfig.addNunjucksFilter("dateToRfc822", dateToRfc822);
 
   eleventyConfig.amendLibrary("md", mdLib => mdLib.use(taskLists));
 

@@ -37,11 +37,11 @@
     "setup": "npm install && npm run validate"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.5",
-    "@11ty/eleventy-img": "^4.0.2",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy-img": "5.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy-plugin-vite": "5.0.0",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/compat": "^1.2.0",
@@ -88,6 +88,7 @@
   },
   "dependencies": {
     "@alpinejs/persist": "^3.14.0",
-    "alpinejs": "^3.14.0"
+    "alpinejs": "^3.14.0",
+    "sharp": "^0.33.4"
   }
 }
