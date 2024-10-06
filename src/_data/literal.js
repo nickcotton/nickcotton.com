@@ -29,7 +29,11 @@ export default async function () {
       body: JSON.stringify(queryData),
     });
 
-    const { data } = await response.json();
+    const jsonResponse = await response.json();
+    const data = jsonResponse?.data;
+    if (!data) {
+      throw new Error("No data returned from API");
+    }
     const readingOrFinished = data.myReadingStates.filter(
       (state) => state.status === "IS_READING" || state.status === "FINISHED",
     );
