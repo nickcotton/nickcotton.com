@@ -2,6 +2,7 @@ backend:
   name: github
   repo: nickcotton/nickcotton
   branch: main
+media_folder: "src/images"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
