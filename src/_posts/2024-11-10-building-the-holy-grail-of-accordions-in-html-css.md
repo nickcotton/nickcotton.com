@@ -1,11 +1,14 @@
 ---
 title: Building the holy grail of accordions in HTML & CSS
-date: 2024-11-09
+date: 2024-11-10
 ---
+
+## Intro
 
 For a recent work project, we needed to build an accordion to house some product information. It's something I've built a number of times before so this time I decided to see if I could do it all in pure HTML & CSS.
 
-Requirements
+## Requirements
+
 - Transitions for opening/closing
 - One open row at a time
 - First row should start as open
@@ -101,6 +104,10 @@ A few really interesting details here, like the `::details-content` pseudo selec
 ```
 
 This is a new CSS feature, only available in Chrome for now I think but it basically allows you to then use keywords in places like transitions. This is the magic that allows us to transition the accordion state without any JS. How good!
+
+Anyway, this post mainly exists as a place for me to copy and paste this from in the future.
+
+## Demo
 
 {% codeDemo %}
 
