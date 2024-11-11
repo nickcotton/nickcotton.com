@@ -3,17 +3,15 @@ import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import { feedPlugin, dateToRfc822 } from "@11ty/eleventy-plugin-rss";
 import taskLists from "markdown-it-task-lists";
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { DateTime } from "luxon";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import codeDemoShortcode from "./config/codeDemoShortcode.js";
 
-export default function (eleventyConfig) {
+export default async function (eleventyConfig) {
   dotenvConfig();
   eleventyConfig.addGlobalData("env", process.env);
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
-  eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom", // or "rss", "json"
@@ -96,6 +94,30 @@ export default function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("dateToRfc822", dateToRfc822);
 
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(taskLists));
+
+  eleventyConfig.on("eleventy.before", async () => {
+    const shiki = await import("shiki");
+    const highlighter = await shiki.createHighlighter({
+      themes: ["github-dark", "github-light"],
+      langs: ["html", "css", "yaml", "js", "ts", "liquid", "diff", "ruby"],
+    });
+
+    eleventyConfig.amendLibrary("md", function (mdLib) {
+      return mdLib.set({
+        highlight: function (code, lang) {
+          let highlightedCode = highlighter.codeToHtml(code, {
+            lang: lang,
+            themes: {
+              light: "github-dark",
+              dark: "github-dark",
+            },
+          });
+
+          return highlightedCode;
+        },
+      });
+    });
+  });
 
   return {
     dir: {
