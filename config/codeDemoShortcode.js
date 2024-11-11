@@ -63,7 +63,7 @@ export default async function (content, title) {
 
   const shikiHtml = await codeToHtml(html, {
     lang: "html",
-    theme: "vitesse-dark",
+    theme: "github-dark",
   });
 
   langs.push({ lang: "html", content: shikiHtml });
@@ -73,7 +73,7 @@ export default async function (content, title) {
   if (css) {
     shikiCss = await codeToHtml(css, {
       lang: "css",
-      theme: "vitesse-dark",
+      theme: "github-dark",
     });
     langs.push({ lang: "css", content: shikiCss });
   }
@@ -81,7 +81,7 @@ export default async function (content, title) {
   if (js) {
     shikiJs = await codeToHtml(js, {
       lang: "js",
-      theme: "vitesse-dark",
+      theme: "github-dark",
     });
     langs.push({ lang: "js", content: shikiJs });
   }
