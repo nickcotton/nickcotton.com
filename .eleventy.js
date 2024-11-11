@@ -1,61 +1,61 @@
-import { config as dotenvConfig } from 'dotenv';
-import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
+import { config as dotenvConfig } from "dotenv";
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import { feedPlugin, dateToRfc822 } from "@11ty/eleventy-plugin-rss";
-import taskLists from 'markdown-it-task-lists';
+import taskLists from "markdown-it-task-lists";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import { DateTime } from 'luxon';
+import { DateTime } from "luxon";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import codeDemoShortcode from './config/codeDemoShortcode.js';
+import codeDemoShortcode from "./config/codeDemoShortcode.js";
 
 export default function (eleventyConfig) {
   dotenvConfig();
-  eleventyConfig.addGlobalData('env', process.env);
+  eleventyConfig.addGlobalData("env", process.env);
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom", // or "rss", "json"
-		outputPath: "/feed.xml",
-		collection: {
-			name: "posts", // iterate over `collections.posts`
-			limit: 0,      // 0 means no limit
-		},
-		metadata: {
-			language: "en",
-			title: "Nick Cotton - Blog",
-			subtitle: "How Good",
-			base: "https://nickcotton.com",
-			author: {
-				name: "Nick Cotton",
-				email: "", // Optional
-			}
-		}
+    outputPath: "/feed.xml",
+    collection: {
+      name: "posts", // iterate over `collections.posts`
+      limit: 0, // 0 means no limit
+    },
+    metadata: {
+      language: "en",
+      title: "Nick Cotton - Blog",
+      subtitle: "How Good",
+      base: "https://nickcotton.com",
+      author: {
+        name: "Nick Cotton",
+        email: "", // Optional
+      },
+    },
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-		// which file extensions to process
-		extensions: "html",
+    // which file extensions to process
+    extensions: "html",
 
-		// optional, attributes assigned on <img> override these values.
-		defaultAttributes: {
-			loading: "lazy",
-			decoding: "async"
-		},
+    // optional, attributes assigned on <img> override these values.
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+    },
 
     urlPath: "/images/",
-	});
+  });
 
   eleventyConfig.addPairedShortcode("codeDemo", codeDemoShortcode);
 
   // Static assets to pass through
-  eleventyConfig.addPassthroughCopy('./src/fonts');
-  eleventyConfig.addPassthroughCopy('./src/images');
-  eleventyConfig.addPassthroughCopy('./src/public');
-  eleventyConfig.addPassthroughCopy('./src/styles');
-  eleventyConfig.addPassthroughCopy('./src/main.js');
-  eleventyConfig.addPassthroughCopy('./src/dev.js');
+  eleventyConfig.addPassthroughCopy("./src/fonts");
+  eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy("./src/public");
+  eleventyConfig.addPassthroughCopy("./src/styles");
+  eleventyConfig.addPassthroughCopy("./src/main.js");
+  eleventyConfig.addPassthroughCopy("./src/dev.js");
 
   eleventyConfig.setServerOptions({
     // Default values are shown:
@@ -86,24 +86,26 @@ export default function (eleventyConfig) {
     },
 
     // Change the default file encoding for reading/serving files
-    encoding: 'utf-8',
+    encoding: "utf-8",
   });
 
-  eleventyConfig.addFilter("postDate", (dateObj) => DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED))
+  eleventyConfig.addFilter("postDate", (dateObj) =>
+    DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED),
+  );
 
   eleventyConfig.addNunjucksFilter("dateToRfc822", dateToRfc822);
 
-  eleventyConfig.amendLibrary("md", mdLib => mdLib.use(taskLists));
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(taskLists));
 
   return {
     dir: {
-      input: 'src',
-      output: '_site',
+      input: "src",
+      output: "_site",
     },
     passthroughFileCopy: true,
-    templateFormats: ['liquid', 'html', 'md', 'njk'],
-    htmlTemplateEngine: 'liquid',
-    dataTemplateEngine: 'liquid',
-    markdownTemplateEngine: 'liquid',
+    templateFormats: ["liquid", "html", "md", "njk"],
+    htmlTemplateEngine: "liquid",
+    dataTemplateEngine: "liquid",
+    markdownTemplateEngine: "liquid",
   };
-};
+}
