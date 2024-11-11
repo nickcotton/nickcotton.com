@@ -14,6 +14,8 @@ Here's the current process:
 - Copy the draft from Obsidian into VSCode which has my entire site repo open at all times.
 - Create a new git branch for the post.
 - Try and work out how how to fit a blog post into the Conventional Commits framework (feat? chore?).
+- `git add .` to stage the file, which I always forget to do before committing.
+- Commit.
 - Create a PR (what) to the main branch of my own site (lol).
 - Review the PR (am I ok?).
 - Update the dates at the last minute.
