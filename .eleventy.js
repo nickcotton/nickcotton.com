@@ -98,8 +98,18 @@ export default async function (eleventyConfig) {
   eleventyConfig.on("eleventy.before", async () => {
     const shiki = await import("shiki");
     const highlighter = await shiki.createHighlighter({
-      themes: ["github-dark", "github-light"],
-      langs: ["html", "css", "yaml", "js", "ts", "liquid", "diff", "ruby"],
+      themes: ["github-dark"],
+      langs: [
+        "css",
+        "diff",
+        "html",
+        "js",
+        "liquid",
+        "ruby",
+        "shell",
+        "ts",
+        "yaml",
+      ],
     });
 
     eleventyConfig.amendLibrary("md", function (mdLib) {
