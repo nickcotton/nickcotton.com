@@ -3,6 +3,7 @@ import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import { feedPlugin, dateToRfc822 } from "@11ty/eleventy-plugin-rss";
 import taskLists from "markdown-it-task-lists";
+import footnotes from "markdown-it-footnote";
 import { DateTime } from "luxon";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import codeDemoShortcode from "./config/codeDemoShortcode.js";
@@ -94,6 +95,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("dateToRfc822", dateToRfc822);
 
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(taskLists));
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(footnotes));
 
   eleventyConfig.on("eleventy.before", async () => {
     const shiki = await import("shiki");
