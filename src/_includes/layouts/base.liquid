@@ -35,6 +35,27 @@
       onload="this.media='all'; this.onload=null;"
     />
 
+    <script type=speculationrules>
+      {
+        "prefetch": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "immediate"
+          }
+        ],
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+
     <script defer src="https://analytics.eu.umami.is/script.js" data-website-id="6495564b-5949-4491-8c59-86ca25e8c37c"></script>
 
     <script>
