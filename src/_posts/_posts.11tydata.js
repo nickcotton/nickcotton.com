@@ -5,4 +5,8 @@ export default {
     return `/blog/${page.fileSlug}/`;
   },
   tags: ["posts"],
+  eleventyComputed: {
+    eleventyExcludeFromCollections: (data) =>
+      data.eleventyExcludeFromCollections || data.draft,
+  },
 };
