@@ -18,7 +18,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' https://rsms.me https://api.netlify.com; frame-src 'self' https://app.netlify.com; style-src 'self' https://rsms.me 'unsafe-inline'; script-src-elem 'self' 'unsafe-eval' 'unsafe-inline' https://analytics.eu.umami.is https://cdn.tailwindcss.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://analytics.eu.umami.is; connect-src 'self' https://analytics.eu.umami.is https://api-gateway-eu.umami.dev; worker-src 'self' blob:; img-src 'self' https://a.ltrbxd.com"
+    Content-Security-Policy = "default-src 'self' https://rsms.me https://api.netlify.com; frame-src 'self' https://app.netlify.com; style-src 'self' https://rsms.me 'unsafe-inline'; script-src-elem 'self' 'unsafe-eval' 'unsafe-inline' https://cloud.umami.is https://cdn.tailwindcss.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cloud.umami.is; connect-src 'self' https://cloud.umami.is https://eu.umami.is; https://gateway.umami.is; https://api-gateway-eu.umami.dev; https://api-gateway.umami.dev; worker-src 'self' blob:; img-src 'self' https://a.ltrbxd.com"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
