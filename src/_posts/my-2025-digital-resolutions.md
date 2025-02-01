@@ -1,7 +1,7 @@
 ---
 title: My 2025 digital resolutions
 toc: 
-draft: true
+draft: false
 ---
 My opinion on new years resolutions has always been pretty cynical (surprise!). I always thought that if you really wanted to do something, you'd already be doing it.
 
@@ -21,11 +21,11 @@ I've said I'll aim for a post a month, so we'll see. I've got a couple of drafts
 
 By "off the grid" I mean I want to rely less on paying monthly subscriptions to access my own music, movies, etc.
 
-I've got my music library set up in Doppler (which I love) and manually sync albums to my phone when I get the time. Having offline access to music wherever I go has removed a major annoyance for me.
+I've got my music library set up in Doppler (which I love) and manually sync albums to my phone when I get the time. Having offline access to music wherever I go has removed a major annoyance in my life, especially when stuck on the tube.
 
 ## 4. Continue to learn and use Neovim
 
-Spent some time during the holiday season getting to grips with Vim/Neovim. I'm still very much on the wrong end of the learning curve at the moment but this has been a fascinating learning experience. I'm beginning to see what all the fuss is about! As a side effect.
+Spent some time during the holiday season getting to grips with Neovim. I'm still very much on the wrong end of the learning curve at the moment but this has been a fascinating learning experience. I'm beginning to see what all the fuss is about!
 
 ## 5. Keep my dotfiles on github
 
@@ -37,7 +37,7 @@ I've really got this laptop set up how I like so would be a shame to have to sta
 
 ## 6. Explore and participate in some of the non-billionaire-owned social networks and apps
 
-Have like the look of Glass for a long time and I'm an active lurker on Mastodon and Bluesky
+Have liked the look of Glass for a long time and I'm an active lurker on Mastodon and Bluesky. Also hear good things about pixelfed but I'm beginning to worry that social media was just a mistake, whether it's centralised or not.
 
 ## 7. Tidy up my iPhone homescreen and apps
 
@@ -47,4 +47,4 @@ Would be great to get this down to a single screen or two. Currently the app lib
 
 Have owned Things for a long time but still working out how it fits into my digital life alongside Obsidian, Apple Notes and Reminders. I've got a shortcut setup to pop the quick entry dialog. It's ingrained into my muscle memory, now I just need to make a habit of going back and organising things (and ticking them off).
 
-That's it I guess? Once again I need to go through and link up a bunch of things here.
+That's it I guess? Once again I need to go through and link up a bunch of things here, but just going to publish this now so it doesn't languish in a drafts folder for months.
