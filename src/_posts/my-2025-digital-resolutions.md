@@ -7,7 +7,7 @@ My opinion on new years resolutions has always been pretty cynical (surprise!). 
 
 This year I've tried to allow a little exploration in and went through and made a list of all the things I'd like to do this year.
 
-There are a whole bunch of the usual, uninteresting ones (read more, watch less) but I thought I'd pull out some that leant into digital life a bit more.
+There are a whole bunch of the usual, uninteresting ones (read more, watch less) but I thought I'd pull out some that lean into digital life a bit more.
 
 ## 1. Don't keep my phone next to my bed.
 
