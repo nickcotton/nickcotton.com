@@ -116,7 +116,7 @@ export default async function (content, title) {
 
   return outdent`
   <div class="code-demo not-prose mb-8">
-    <div class="tabs flex bg-red-200">
+    <div class="tabs flex">
       ${tabs(id)}
       ${previewTab(id)}
     </div>
