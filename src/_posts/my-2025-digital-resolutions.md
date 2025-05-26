@@ -2,6 +2,7 @@
 title: My 2025 digital resolutions
 toc: 
 draft: false
+date: 2025-02-02T00:00:00
 ---
 My opinion on new years resolutions has always been pretty cynical (surprise!). I always thought that if you really wanted to do something, you'd already be doing it.
 
