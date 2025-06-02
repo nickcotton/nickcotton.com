@@ -17,7 +17,7 @@ meta:
   <ul class="list-none p-0 m-0 grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-8 gap-4">
     {% for film in letterboxd limit:24 %}
       <li class="animate-rise-in" style="animation-fill-mode: backwards; --index: {{ forloop.index }}">
-        <a href="{{ film.link }}" class="block border border-slate-300 dark:border-slate-500 rounded-sm overflow-hidden">
+        <a href="{{ film.link }}" class="block border border-slate-300 dark:border-slate-500 rounded-xs overflow-hidden">
           <img src="{{ film.posterImageSrc }}" alt="{{ film.title }}" class="w-full h-auto" eleventy:widths="400" width="400" height="600">
         </a>
       </li>
@@ -33,7 +33,7 @@ meta:
   <ul class="list-none p-0 m-0 grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-8 gap-4 items-end">
     {% for state in literal limit:8 %}
       <li class="animate-rise-in" style="animation-fill-mode: backwards; --index: {{ forloop.index }}">
-        <a href="https://literal.club/book/{{ state.book.slug }}" class="block border border-slate-300 dark:border-slate-500 rounded-sm overflow-hidden">
+        <a href="https://literal.club/book/{{ state.book.slug }}" class="block border border-slate-300 dark:border-slate-500 rounded-xs overflow-hidden">
           <img src="{{ state.book.cover }}" alt="{{ state.book.title }}" class="w-full h-auto" eleventy:widths="400">
         </a>
       </li>
@@ -49,7 +49,7 @@ meta:
   <ul class="list-none p-0 m-0 grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-8 gap-4 items-end">
     {% for album in lastfm limit:8 %}
       <li class="animate-rise-in" style="animation-fill-mode: backwards; --index: {{ forloop.index }}">
-        <a href="{{ album.url }}" class="block border border-slate-300 dark:border-slate-500 rounded-sm overflow-hidden">
+        <a href="{{ album.url }}" class="block border border-slate-300 dark:border-slate-500 rounded-xs overflow-hidden">
           <img src="{{ album.image }}" alt="{{ album.title }} by {{ album.artist }}" class="w-full h-auto" eleventy:widths="400">
         </a>
       </li>
