@@ -19,9 +19,6 @@ permalink: /books/
       <div>
         <span href="{{ book.url }}" class="font-semibold">{{ book.data.title }}</span>
         <span class="text-sm text-gray-600 ml-1">by {{ book.data.author }}</span>
-        {% comment %}
-          Only show the review link if the file body (templateContent) is not just whitespace.
-        {% endcomment %}
         {% assign reviewContent = book.content |  strip | size %}
         {% if reviewContent > 0 %}
           <a href="{{ book.url }}" class="text-sm underline ml-1">Review</a>
