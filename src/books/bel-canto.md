@@ -1,6 +1,6 @@
 ---
 title: Bel Canto
-author: ["Ann Patchett"]
+author: "Ann Patchett"
 rating:
 tags:
 date_started: 2025-05-27

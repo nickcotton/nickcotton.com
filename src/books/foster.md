@@ -1,6 +1,6 @@
 ---
 title: "Foster"
-authors: "Claire Keegan"
+author: "Claire Keegan"
 date_started:
 date_finished: 2024-12-20
 date_published: 2022-09-01

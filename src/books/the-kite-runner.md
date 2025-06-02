@@ -1,6 +1,6 @@
 ---
 title: "The Kite Runner"
-authors: "Khaled Hosseini"
+author: "Khaled Hosseini"
 date_started:
 date_finished: 2024-12-10
 date_published: 2018-08-23
