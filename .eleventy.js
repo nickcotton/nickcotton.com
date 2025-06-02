@@ -56,6 +56,45 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/main.js");
   eleventyConfig.addPassthroughCopy("./src/dev.js");
 
+  eleventyConfig.addCollection("booksByFinish", (collectionApi) => {
+    // 1. Grab everything in `collections.books` that actually has a date_finished
+    let finished = collectionApi.getFilteredByTag("books").filter((item) => {
+      return item.data.date_finished;
+    });
+    // 2. Sort descending (newest → oldest)
+    finished.sort((a, b) => {
+      // a.data.date_finished and b.data.date_finished are real JS Date objects
+      return b.data.date_finished - a.data.date_finished;
+    });
+    return finished;
+  });
+
+  eleventyConfig.addCollection("unfinishedBooksByStart", (collectionApi) => {
+    // 1. Grab everything in `collections.books` that has no date_finished
+    let unfinished = collectionApi.getFilteredByTag("books").filter((item) => {
+      return !item.data.date_finished;
+    });
+    // 2. Sort descending (newest → oldest)
+    unfinished.sort((a, b) => {
+      // a.data.date_started and b.data.date_started are real JS Date objects
+      return b.data.date_started - a.data.date_started;
+    });
+    return unfinished;
+  });
+
+  eleventyConfig.addCollection("unknownBooks", (collectionApi) => {
+    // 1. Grab everything in `collections.books` that has no date_started or date_finished
+    let unknown = collectionApi.getFilteredByTag("books").filter((item) => {
+      return !item.data.date_started && !item.data.date_finished;
+    });
+    // 2. Sort alphabetically by title
+    unknown.sort((a, b) => {
+      // a.data.title and b.data.title are strings
+      return a.data.title.localeCompare(b.data.title);
+    });
+    return unknown;
+  });
+
   eleventyConfig.setServerOptions({
     // Default values are shown:
 

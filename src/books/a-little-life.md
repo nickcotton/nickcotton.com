@@ -2,6 +2,8 @@
 title: A Little Life
 author: Hanya Yanagihara
 rating: 5
+date_started: 2025-05-10
+date_finished: 2025-05-22
 tags:
   - fiction
   - contemporary

@@ -5,7 +5,7 @@ permalink: /books/
 ---
 
 <ul class="space-y-2">
-  {% for book in collections.books | sort: "data.date_finished" | reverse %}
+  {% for book in collections.booksByFinish %}
     {% assign rating = book.data.rating | default: 0 %}
     {% if rating > 5 %}{% assign rating = 5 %}{% endif %}
     {% if rating < 0 %}{% assign rating = 0 %}{% endif %}
@@ -18,7 +18,9 @@ permalink: /books/
 
       <div>
         <a href="{{ book.url }}" class="font-semibold">{{ book.data.title }}</a>
-        <span class="text-sm text-gray-600 ml-2">by {{ book.data.author }}</span>
+        <span class="text-sm text-gray-600 ml-1">by {{ book.data.author }}</span>
+        <span class="text-sm ml-1">by {{ book.data.date_finished }}</span>
+
       </div>
     </li>
   {% endfor %}
