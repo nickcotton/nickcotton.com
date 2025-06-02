@@ -2,9 +2,9 @@
 title: The Outsider
 author: Albert Camus
 rating: 5
-tags: 
-startDate: 2025-05-26
-finishDate: 2025-05-27
+tags:
+date_started: 2025-05-26
+date_finished: 2025-05-27
 ---
 AKA The Stranger.
 

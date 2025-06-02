@@ -5,7 +5,7 @@ permalink: /books/
 ---
 
 <ul class="space-y-2">
-  {% for book in collections.books | sort: "data.finishDate" | reverse %}
+  {% for book in collections.books | sort: "data.date_finished" | reverse %}
     {% assign rating = book.data.rating | default: 0 %}
     {% if rating > 5 %}{% assign rating = 5 %}{% endif %}
     {% if rating < 0 %}{% assign rating = 0 %}{% endif %}
