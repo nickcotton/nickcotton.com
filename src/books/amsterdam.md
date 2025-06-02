@@ -2,6 +2,8 @@
 title: Amsterdam
 author: Ian McEwan
 rating: 4
+date_started: 2025-05-22
+date_finished: 2025-05-26
 tags:
   - fiction
   - booker prize
