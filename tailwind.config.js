@@ -14,9 +14,20 @@ module.exports = {
           "0%": { transform: "scale(0.5)" },
           "100%": { transform: "scale(1)" },
         },
+        rotateInY: {
+          from: {
+            transform: "rotateY(70deg)",
+            opacity: "0",
+          },
+          to: {
+            transform: "rotateY(0)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         pop: "pop 0.5s ease-out",
+        rotateInY: "rotateInY 1s ease-out",
       },
     },
   },
